@@ -2,28 +2,40 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>注册表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册页面</title>
+    <!-- 引入css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>用户注册</h2>
-    <form>
-        <div>
-            <label>用户名：</label>
-            <input type="text" name="username">
-        </div>
-        <div style="margin-top:8px">
-            <label>密码：</label>
-            <input type="password" name="pwd">
-        </div>
-        <div style="margin-top:8px">
-            <label>邮箱：</label>
-            <input type="email" name="email">
-        </div>
-        <div style="margin-top:12px">
-            <input type="submit" value="提交">
-        </div>
-    </form>
+    <div class="container">
+        <h2>用户注册</h2>
+        <form id="registerForm">
+            <div class="form-item">
+                <label>用户名</label>
+                <input type="text" id="username" placeholder="4-16位字母/数字">
+                <span class="tip" id="userTip"></span>
+            </div>
+            <div class="form-item">
+                <label>邮箱</label>
+                <input type="email" id="email" placeholder="请输入邮箱">
+                <span class="tip" id="emailTip"></span>
+            </div>
+            <div class="form-item">
+                <label>密码</label>
+                <input type="password" id="pwd" placeholder="至少6位">
+                <span class="tip" id="pwdTip"></span>
+            </div>
+            <div class="form-item">
+                <label>确认密码</label>
+                <input type="password" id="pwd2" placeholder="再次输入密码">
+                <span class="tip" id="pwd2Tip"></span>
+            </div>
+            <button type="submit">提交注册</button>
+        </form>
+    </div>
+
+    <!-- 引入js -->
     <script src="script.js"></script>
 </body>
 </html>
